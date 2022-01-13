@@ -2,3 +2,4 @@ node_modules/
 build/
 wrangler.toml
 .DS_Store
+local.config.ts
