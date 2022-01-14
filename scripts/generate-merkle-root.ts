@@ -15,4 +15,9 @@ const json = JSON.parse(fs.readFileSync(program.input, { encoding: 'utf8' }))
 
 if (typeof json !== 'object') throw new Error('Invalid JSON')
 
-console.log(JSON.stringify(parseBalanceMap(json)))
+var res = parseBalanceMap(json)
+for (const item in res.claims) {
+  console.log(item, JSON.stringify(res.claims[item]))
+}
+console.log(res.merkleRoot)
+// console.log(JSON.stringify(parseBalanceMap(json)))
