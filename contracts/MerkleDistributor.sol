@@ -64,7 +64,7 @@ contract MerkleDistributor is IMerkleDistributor, ERC721, Ownable{
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         Summary memory summary = tokenSummary[tokenId];
         string memory level = scoreLevel(summary.score);
-        string memory name = string(abi.encodePacked(summary.creature, " ", level,  "#", toString(tokenId)));
+        string memory name = string(abi.encodePacked(summary.creature, " ", level,  " #", toString(tokenId)));
         string memory url = urlMap[string(abi.encodePacked(summary.creature, level))];
         string memory json = Base64.encode(
             bytes(
