@@ -24,12 +24,46 @@ contract MerkleDistributor is IMerkleDistributor, ERC721, Ownable{
     mapping(uint256 => Summary) private tokenSummary;
 
     constructor(bytes32 merkleRoot_) public 
-        ERC721('metacraft1', 'metacraft1')
+        ERC721('Metacraft season pass 2022', 'MC2022')
         Ownable() 
     {
         merkleRoot = merkleRoot_;
-        urlMap["SlimeGolden"] = "https://storage.googleapis.com/opensea-prod.appspot.com/creature/50.png";
-        urlMap["SlimeCopper"] = "https://storage.googleapis.com/opensea-prod.appspot.com/creature/50.png";
+        urlMap["SlimeGolden"] = "ar://7vpBOE3GJ4kJp63W8kWTnfGvkGGxqF0qVOlTYKm_bEw";
+        urlMap["SlimeSilvery"] = "ar://rde367iRyDFJgn9-43UfuAKLbNv-EufF7VKfCb-uPUo";
+        urlMap["SlimeCopper"] = "ar://gdP5kjV_fc8jC3UB7dunit_vyI0P0ZLWSWElsIs0o98";
+        urlMap["BeeGolden"] = "ar://_2PeWFSVKhwrZUvR7h38JkXmvlcB9EM6x1D9aqfFjh8";
+        urlMap["BeeSilvery"] = "ar://T8RAlB9mOY2CYh8LxoVP6NBPKlzl-GCkZbfpsb7lkCs";
+        urlMap["BeeCopper"] = "ar://zhVYdySVzfjyQkLx0YWcXuLwxLkLJ09Q3OFVurU01eY";
+        urlMap["CowGolden"] = "ar://pswhfVTmMh9SB9VXunZ9NrItB3Zqz4ICz-io2cGefbI";
+        urlMap["CowSilvery"] = "ar://8qnOSFqMNm_Isi9b9gF4_A_uKuxOR_35r0NsS4LspJw";
+        urlMap["CowCopper"] = "ar://EqM8vIUKF-sGiz-ShInXjzcmsToKPPqbyLdggMiAiJc";
+        urlMap["CreeperGolden"] = "ar://gThiSTBd8n3NwsLZo6dgbEWHGymE1e-7WNh_O6IsINY";
+        urlMap["CreeperSilvery"] = "ar://r0GvIh0Or23Qmjo3lNK9vzdm3414Ct7wGqC9u0tqjhk";
+        urlMap["CreeperCopper"] = "ar://yuE5FdjAHNINqnP14ZWFlKdJ3kVQrmXFGCj_ku0nB-4";
+        urlMap["DolphinGolden"] = "ar://xQtK4EsopUVdleWc8Gw-8aPGH-zJ9spuyvEuhxNtYN8";
+        urlMap["DolphinSilvery"] = "ar://JLhjPuom7wzddo5-qgDlkLXZIuhuJTEJiy85e_kFKz8";
+        urlMap["DolphinCopper"] = "ar://D3wwZckyOQ1NLVMzJ3CrXlww4fiS4qXn8HQGuP09qgg";
+        urlMap["EnderDragonGolden"] = "ar://C0zfXnXu3jIYe6gbJzr4MCNaLi9ndqGc_DZOKLJebpE";
+        urlMap["EnderDragonSilvery"] = "ar://bW_B1qid-blKGSBRvqTFFIZkV1l2obnQ5DQ8SanAacQ";
+        urlMap["EnderDragonCopper"] = "ar://lrzrNtuIGa4i28hJY81uWSif-Rt_Ug4LJ3ZLCqn8G90";
+        urlMap["EndermanGolden"] = "ar://RVZOfVPgegqYnvCpsI4BDa69XREiZmSlsSm7H_6gU0o";
+        urlMap["EndermanSilvery"] = "ar://_KYzopNYjSYcsAFUEovjUYfD8dwnqlwUcoxsWDpQK7g";
+        urlMap["EndermanCopper"] = "ar://71eGx6A_RvMcldnFB0nqU2UA3NgvicbJo22DOJJlLYs";
+        urlMap["IronGolemGolden"] = "ar://GRKyE3ZvgXjilrdQ5__1NL6RTiqW5-kTwR5kyt4jf68";
+        urlMap["IronGolemSilvery"] = "ar://1-_sf-2Xxi00hGxv15k7EbVChDkEp6h9bmFuQCkLsms";
+        urlMap["IronGolemCopper"] = "ar://MUs64O0K72jpsq6gqShuKygzlLqOyZiZbmDIUJ0M7hg";
+        urlMap["TurtleGolden"] = "ar://4g2MqEi-8b-Lh2F__jtM55dxSKUZpc5IJG2VlFJd7V4";
+        urlMap["TurtleSilvery"] = "ar://g4H3kqjAfshjBEoIkX6Ks2ViRtL88aqyfag5Si0JD4I";
+        urlMap["TurtleCopper"] = "ar://0PfeXImbImNFWv0J6nYMrnAKZjuQAvZn7HqZe2TNoZ8";
+        urlMap["WitherGolden"] = "ar://EMLrsR5vvB6i8mgg71A_RAH-kBA44be-jTeNFIaUmpc";
+        urlMap["WitherSilvery"] = "ar://PcSYjwvWQx-JoMUEIPidnwPectQjKg25lrTXI4xULrQ";
+        urlMap["WitherCopper"] = "ar://_dIP9gZrnIjeQUqsF7w8dppU0qbXdQyEvIimxg4spsY";
+        urlMap["AxolotlGolden"] = "ar://ZVMqJEThT2vs_cYL7CMd4ijLvUqC9Koz2D6sdI1WvGc";
+        urlMap["AxolotlSilvery"] = "ar://EubG1GY0nYD3mpAWx69mX_30m3eZKCF6O77cS_beqMU";
+        urlMap["AxolotlCopper"] = "ar://UpTJnmJpVtD2oAqcW2mM2UH8WtzLcLNQHw6SWy027hg";
+        urlMap["PigGolden"] = "ar://7O2OuLHESc5zjwVTCrBeu7Un9TWUAVNcYNeao3tqJmg";
+        urlMap["PigSilvery"] = "ar://MLfajgCbkynn2QCttTYpxrkCD0p4Ve2p0hVYPVqfeCg";
+        urlMap["PigCopper"] = "ar://NJKtswIpy8tnARbpPUgai0RNehgjkFfVoVyIsiS-VwU";
     }
 
     function isClaimed(uint256 index) public view override returns (bool) {
