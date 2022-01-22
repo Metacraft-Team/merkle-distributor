@@ -15,7 +15,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
     const isOracleNew = (await deploy('MerkleDistributor', {
         from: deployer,
-        args: ['0x1fe4549be478cc1af80780fc09cb768475822ca88620eb584119767377b7b00d'],
+        args: ['0x96aaea16a6b418f92ac445af7c98da897e035ea230510a187567e19895ad9157'],
     })).newlyDeployed;
     
 };
