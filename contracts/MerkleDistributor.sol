@@ -20,8 +20,8 @@ contract MerkleDistributor is IMerkleDistributor, ERC721, Ownable {
     bytes32 public immutable override merkleRoot;
     // This is a packed array of booleans.
     mapping(uint256 => uint256) private claimedBitMap;
-    mapping(string => string) private urlMap;
-    mapping(uint256 => Summary) private tokenSummary;
+    mapping(string => string) public urlMap;
+    mapping(uint256 => Summary) public tokenSummary;
 
     constructor(bytes32 merkleRoot_) public ERC721('Metacraft Season Pass 2022', 'MC2022') Ownable() {
         merkleRoot = merkleRoot_;
